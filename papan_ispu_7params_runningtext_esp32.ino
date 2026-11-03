@@ -5,6 +5,7 @@
 #define PIN_DATA1 8
 #define PIN_DATA2 7
 #define PIN_DATA3 6
+#define PIN_DATA4 9
 #define PIN_CLK 18
 #define PIN_LAT 14
 #define PIN_OE 21
@@ -14,7 +15,7 @@
 #define PIN_TRIMPOT 5
 
 #define PANEL_WIDE 12
-#define PANEL_HIGH 3
+#define PANEL_HIGH 4
 
 #define DISPLAY_WIDTH 384
 #define DISPLAY_HEIGHT 16
@@ -28,7 +29,7 @@
 #define MAX_SPLIT_ITEMS 10
 
 FansElectronics_DMD32 dmd;
-DmdPins pinsHUB12 = {PIN_A, PIN_B, -1, -1, PIN_LAT, PIN_CLK, PIN_OE, PIN_DATA1, PIN_DATA2, PIN_DATA3, -1};
+DmdPins pinsHUB12 = {PIN_A, PIN_B, -1, -1, PIN_LAT, PIN_CLK, PIN_OE, PIN_DATA1, PIN_DATA2, PIN_DATA3, PIN_DATA4};
 
 FansElectronics_Bitmap runningtext1(AREA_WIDTH, DISPLAY_HEIGHT);
 FansElectronics_Bitmap runningtext2(AREA_WIDTH, DISPLAY_HEIGHT);
@@ -95,7 +96,7 @@ void setup() {
 }
 
 void loop() {
-  // listen_serial();
+  listen_serial();
   listen_modem();
   parsing_data();
   runningText();

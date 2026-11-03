@@ -12,7 +12,8 @@ void runningText() {
         runningtext2.drawText(pos2, 0, textbawah.c_str());
         dmd.clear();
         dmd.drawBitmap(0, 0, runningtext1, FansElectronics_Bitmap::White);
-        dmd.drawBitmap(AREA_WIDTH, 0, runningtext2, FansElectronics_Bitmap::White);
+        dmd.drawBitmap(0, 16, runningtext2, FansElectronics_Bitmap::White);
+        // dmd.drawBitmap(AREA_WIDTH, 0, runningtext2, FansElectronics_Bitmap::White);
     }
 }
 
@@ -33,12 +34,12 @@ void drawGraph(){
     h_o3 = get_h_graph(o3.toInt());
     h_hc = get_h_graph(hc.toInt());
 
-    dmd.fill(0, 16, h_pm25, 16, FansElectronics_Bitmap::White);
-    dmd.fill(96, 16, h_pm10, 16, FansElectronics_Bitmap::White);
-    dmd.fill(192, 16, h_so2, 16, FansElectronics_Bitmap::White);
-    dmd.fill(288, 16, h_no2, 16, FansElectronics_Bitmap::White);
+    dmd.fill(0, 32, h_pm25, 16, FansElectronics_Bitmap::White);
+    dmd.fill(96, 32, h_pm10, 16, FansElectronics_Bitmap::White);
+    dmd.fill(192, 32, h_so2, 16, FansElectronics_Bitmap::White);
+    dmd.fill(288, 32, h_no2, 16, FansElectronics_Bitmap::White);
 
-    dmd.fill(96, 32, h_co, 16, FansElectronics_Bitmap::White);
-    dmd.fill(192, 32, h_o3, 16, FansElectronics_Bitmap::White);
-    dmd.fill(288, 32, h_hc, 16, FansElectronics_Bitmap::White);    
+    dmd.fill(96, 48, h_co, 16, FansElectronics_Bitmap::White);
+    dmd.fill(192, 48, h_o3, 16, FansElectronics_Bitmap::White);
+    dmd.fill(288, 48, h_hc, 16, FansElectronics_Bitmap::White);    
 }
