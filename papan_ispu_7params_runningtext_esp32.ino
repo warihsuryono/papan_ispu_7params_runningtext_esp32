@@ -1,6 +1,5 @@
 #include <FansElectronics_DMD32.h>
 #include <fonts/Arial_Black_16.h>
-#include <EEPROM.h>
 
 #define PIN_DATA1 8
 #define PIN_DATA2 7
@@ -69,7 +68,6 @@ int h_hc = 0;
 void setup() {
   Serial.begin(115200);
   modem.begin(9600);
-  EEPROM.begin(512);
 
   analogReadResolution(12);
   analogSetPinAttenuation(PIN_TRIMPOT, ADC_11db);
