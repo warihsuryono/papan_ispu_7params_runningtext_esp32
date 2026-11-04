@@ -11,9 +11,8 @@ void runningText() {
         runningtext1.drawText(pos1, 0, textatas.c_str());
         runningtext2.drawText(pos2, 0, textbawah.c_str());
         dmd.clear();
-        dmd.drawBitmap(0, 0, runningtext1, FansElectronics_Bitmap::White);
-        dmd.drawBitmap(0, 16, runningtext2, FansElectronics_Bitmap::White);
-        // dmd.drawBitmap(AREA_WIDTH, 0, runningtext2, FansElectronics_Bitmap::White);
+        dmd.drawBitmap(AREA_WIDTH, 0, runningtext1, FansElectronics_Bitmap::White);
+        dmd.drawBitmap(AREA_WIDTH, 16, runningtext2, FansElectronics_Bitmap::White);
     }
 }
 
