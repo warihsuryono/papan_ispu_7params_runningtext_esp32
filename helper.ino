@@ -1,7 +1,6 @@
 void process_serial_input(HardwareSerial &port) {
   while (port.available() > 0) {
     char c = (char)port.read();
-    Serial.print(c);
     if (c == '@') {
       modem_received.trim();
       if (modem_received.length() > 0) {
@@ -46,7 +45,6 @@ void execute_data(String cmd) {
 void parsing_data(){
     unsigned long now_ms = millis();
     if (now_ms - parsing_timer >= parsing_delay) {
-        parsing_delay = 60000;
         is_parsing = true;
         parsing_timer = now_ms;
         for (int i = 0; i < 5; i++) {
@@ -56,9 +54,9 @@ void parsing_data(){
                     pm25 = datas[1];
                     pm10 = datas[2];
                     so2 = datas[3];
-                    no2 = datas[4];
-                    co = datas[5];
-                    o3 = datas[6];
+                    co = datas[4];
+                    o3 = datas[5];
+                    no2 = datas[6];
                     hc = datas[7];
                 }
                 else if(i==1 && datas[1] != "") textatas = datas[1];
